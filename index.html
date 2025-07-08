@@ -8,7 +8,7 @@
     <!-- Visualization & Content Choices: Report Info -> Project Workflow, Tech Stack, Roadmap. Goal -> Explain a complex system and plan. Viz/Presentation -> Interactive HTML/CSS diagrams (workflow, timeline) and interactive cards (tech stack). Interaction -> Click-to-reveal details in a central modal popup, providing context without losing the main view. Clicking outside or the active element again closes the modal. Justification -> Translates linear text into a spatial, interactive layout, improving comprehension and engagement. Library/Method -> Vanilla JS for interactions, Tailwind CSS for layout and styling. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
-    <title>프로젝트 '소셜 미디어 팩토리' 인터랙티브 기획서 (팝업 UI 적용)</title>
+    <title>프로젝트 '소셜 미디어 팩토리' 인터랙티브 기획서 (UI 수정 적용)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,7 +73,7 @@
             <section id="workflow">
                 <h2 class="text-3xl font-bold text-slate-800 mb-2">핵심 워크플로우</h2>
                 <p class="text-slate-600 mb-8">아래 7단계의 자동화 로직은 사용자가 '만들기' 버튼을 누른 후 백엔드에서 순차적으로 실행됩니다. 각 단계를 클릭하여 상세 내용을 확인하세요.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-center max-w-7xl mx-auto">
                     <div id="step-1" class="workflow-step card p-4 text-center">
                         <span class="inline-block accent-bg text-white rounded-full px-3 py-1 text-sm font-semibold mb-2">1단계</span>
                         <h3 class="font-bold">데이터 전송</h3>
@@ -278,7 +278,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             modalContainer.classList.add('opacity-0');
             modalContent.classList.add('scale-95');
-            handleInteraction('roadmap', 'phase-1');
+            // handleInteraction('roadmap', 'phase-1'); // 페이지 로드 시 기본 팝업이 뜨지 않도록 수정
         });
 
     </script>
